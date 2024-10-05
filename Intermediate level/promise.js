@@ -37,3 +37,22 @@ num = parseInt(prompt());
 add(num)
     .then(num => parseInt(num))
     .then(data => console.log(data))
+
+//task 3: function that returns a Promise that rejects with 'Something went wrong' error message. 
+function promise(txt){
+    return new Promise(resolve =>{
+        setTimeout(() =>{
+            resolve(txt);
+        }, 200)
+    })
+}
+
+text = prompt();
+promise(text)
+    .then(data => data.text())
+    .then(data => console.log(data))
+    .catch((error) => console.log("Something went wrong"))
+    // always runs
+    .finally(() => {
+        console.log('Operation complete.');
+    });
