@@ -23,3 +23,17 @@ function sucessMessage(msg) {
 
 message = prompt();
 console.log(sucessMessage(message));
+
+//task 2: function that returns a promise resolved with the input number
+function add (number){
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(number + 5);
+        }, 2000)
+    });
+}
+
+num = parseInt(prompt());
+add(num)
+    .then(num => parseInt(num))
+    .then(data => console.log(data))
