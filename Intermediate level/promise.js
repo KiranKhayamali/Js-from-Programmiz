@@ -14,10 +14,12 @@ console.log(myPromise);
 
 //task 1: function to create a promise that resolves with a message after 2 seconds
 function sucessMessage(msg) {
-    setTimeout(() =>{
-        console.log(msg);
-    }, 2000)
+    return new Promise(resolve =>{
+        setTimeout(() =>{
+            resolve(msg);
+        }, 2000)
+    })
 };
 
 message = prompt();
-sucessMessage(message);
+console.log(sucessMessage(message));
