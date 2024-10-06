@@ -18,3 +18,16 @@ greeting();
 function greeting() {
   console.log("Hello!! I am your chat assistant.");
 }
+
+//Task :JavaScript Hoisting
+
+console.log(hoistedVar);
+hoistedVar = "This variable is hoisted";
+var hoistedVar;
+console.log(hoistedVar);
+
+hoistedFunction();
+
+function hoistedFunction(){
+    console.log("This function is hoisted");
+}
