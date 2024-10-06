@@ -11,3 +11,10 @@ function printMessage(){
 }
 
 printMessage();
+
+//function hosting
+greeting(); 
+
+function greeting() {
+  console.log("Hello!! I am your chat assistant.");
+}
